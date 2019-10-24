@@ -1,4 +1,5 @@
 package com.spartaglobal.RabbitExplosion;
 
-public class MaleRabbit implements IRabbits {
-}
+//public class MaleRabbit implements IRabbits {
+//
+//}
