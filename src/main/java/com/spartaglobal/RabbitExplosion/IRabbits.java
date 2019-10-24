@@ -7,8 +7,8 @@ public interface IRabbits {
     void setGender(int gender);
     boolean getMature();
     void setMature(boolean mature);
-    boolean getAlive();
-    void setAlive(boolean alive);
+    int getAlive();
+    void setAlive(int alive);
 
 
 

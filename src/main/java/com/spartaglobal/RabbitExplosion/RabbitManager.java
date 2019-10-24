@@ -7,10 +7,6 @@ import java.util.Random;
 
 public class RabbitManager{
 
-    private int alive;
-    private int dead;
-    private int numMaleRabbit = 1;
-    private int numFemaleRabbit = 1;
     int r = 0;
     private Random random = new Random();
 
@@ -19,7 +15,7 @@ public class RabbitManager{
         return r;
     }
 
-    public Rabbit createRabbits (int gender, boolean mature, boolean alive){
+    public Rabbit createRabbits (int gender, boolean mature, int alive){
         Rabbit rabbit = new Rabbit();
 
         rabbit.setAlive(alive);
@@ -29,11 +25,20 @@ public class RabbitManager{
         return rabbit;
     }
 
+    public void Birth(){
+        int b = 60;
+
+        for(int i=0;i<b;i++) {
+            numOfNewRabbits();
+            addToRabbitArray(1, true, 0);
+        }
+    }
+
     List<IRabbits> RabbitList = new ArrayList<>();
     List<IRabbits> FemaleRabbitList = new ArrayList<>();
     List<IRabbits> MaleRabbitList = new ArrayList<>();
 
-    public void addToRabbitArray(int gender, boolean mature, boolean alive){
+    public void addToRabbitArray(int gender, boolean mature, int alive){
         for (int i = 0; i < r;i++ ) {
             gender = (int)(Math.random()*(10 - 0));
 
@@ -50,14 +55,5 @@ public class RabbitManager{
             System.out.println("Male Rabbit List = " + MaleRabbitList.size());
         }
     }
-    public void Birth(){
-        int b = 80;
-        for(int i=0;i<b;i++) {
-            numOfNewRabbits();
-            addToRabbitArray(1, true, true);
-        }
-    }
-
-
 
 }

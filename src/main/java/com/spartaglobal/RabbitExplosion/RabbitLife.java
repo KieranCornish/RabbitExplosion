@@ -8,6 +8,7 @@ public class RabbitLife {
         private int seconds;
         private Timer timer = new Timer();
 
+
         public RabbitLife(int seconds) {
             this.seconds = seconds;
             timer.schedule(new RabbitLife.LifeTask(), 0, 1000);

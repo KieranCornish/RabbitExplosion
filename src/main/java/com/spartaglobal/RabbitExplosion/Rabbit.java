@@ -4,7 +4,7 @@ public class Rabbit implements IRabbits{
 
     public int gender;
     public boolean mature;
-    public boolean alive = true;
+    public int alive;
 
     @Override
     public int getGender() {
@@ -15,7 +15,6 @@ public class Rabbit implements IRabbits{
     @Override
     public void setGender(int gender) {
         this.gender = gender;
-
     }
 
     @Override
@@ -29,13 +28,13 @@ public class Rabbit implements IRabbits{
     }
 
     @Override
-    public boolean getAlive() {
+    public int getAlive() {
 
-        return false;
+        return alive;
     }
 
     @Override
-    public void setAlive(boolean alive) {
+    public void setAlive(int alive) {
         this.alive = alive;
     }
 }
